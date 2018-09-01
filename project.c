@@ -177,6 +177,7 @@ void login()
     if((uname=="admin")&&(pword=="admin"))
     {
       printf("\n LOGIN SUCCESSFUL \n WELCOME TO THE SYSTEM");
+      break;
     }
     else
     { printf("\n LOGIN UNSUCCESSFUL\n");
