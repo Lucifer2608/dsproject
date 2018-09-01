@@ -196,9 +196,14 @@ void print()
     FILE *fs;
     fs=fopen("Reserv_Details.txt","r");
     printf("\nRoom number\tName\tNo of People\tAddress\tEmail-ID\tCheck-In\tCheck-Out\t\n);
+    int i;
+    for(i=0;i<=50;i++)
+           {printf("-");}
     while(!feof(fs))
     { fscanf(fs," %d %s %d %s %s %d %d %d %d",&s.room_number,&s.name,&s.no_of_people,&s.add,&s.email,&s.start_dd,&s.start_mm,&s.end_dd,&s.end_mm);
       printf("%d\t%s\t%d\t%s\t%s\t%d.%d\t%d.%d\n",s.room_number,s.name,s.no_of_people,s.add,s.email,s.start_dd,s.start_mm,s.end_dd,s.end_mm);
+     for(i=0;i<=50;i++)
+           {printf("-");}
     }
      fclose(fs);
    }
