@@ -156,11 +156,59 @@ void add()
        goto EMAIL;
      }
         
-
-
-
+void login()
+{
+  int a=4; 
+  do
+   {
+     int i=0;
+     char uname[10];
+     char pword[10];
+     printf("****************LOGIN FORM****************");
+     printf("\n Enter the username:");
+     scanf("%[^\n]",&uname);
+     printf("\n Enter the password:");
+    while(i<5)
+    { pword[i]=getch();
+      printf("*");
+      i++;
+    }
+    pword[i]='\0';
+    if((uname=="admin")&&(pword=="admin"))
+    {
+      printf("\n LOGIN SUCCESSFUL \n WELCOME TO THE SYSTEM");
+      break;
+    }
+    else
+    { printf("\n LOGIN UNSUCCESSFUL\n");
+      a++;   
+     }
+  }
+  while(a<4);
+  if(a>4)
+  {
+    printf("\n You have entered username and password multiple times.!!!\n);
+  }
+   //system("clear"); //uncomment if you want to utilise it
+}
       
-       
+void print()
+  {
+    FILE *fs;
+    fs=fopen("Reserv_Details.txt","r");
+    printf("\nRoom number\tName\tNo of People\tAddress\tEmail-ID\tCheck-In\tCheck-Out\t\n);
+    int i;
+    for(i=0;i<=50;i++)
+           {printf("-");}
+    while(!feof(fs))
+    { fscanf(fs," %d %s %d %s %s %d %d %d %d",&s.room_number,&s.name,&s.no_of_people,&s.add,&s.email,&s.start_dd,&s.start_mm,&s.end_dd,&s.end_mm);
+      printf("%d\t%s\t%d\t%s\t%s\t%d.%d\t%d.%d\n",s.room_number,s.name,s.no_of_people,s.add,s.email,s.start_dd,s.start_mm,s.end_dd,s.end_mm);
+     for(i=0;i<=50;i++)
+           {printf("-");}
+    }
+     fclose(fs);
+   }
+           
      
        
 
