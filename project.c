@@ -187,7 +187,7 @@ void login()
   while(a<4);
   if(a>4)
   {
-    printf("\n You have entered username and password multiple times.!!!\n);
+    printf("\n You have entered username and password multiple times.!!!\n");
   }
    //system("clear"); //uncomment if you want to utilise it
 }
